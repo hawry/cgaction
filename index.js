@@ -1,10 +1,24 @@
 const core = require("@actions/core")
 const github = require("@actions/github")
-
+const { exec } = require("child_process");
 const { promises: fs } = require("fs")
 
 
 const main = async () => {
+
+  exec("ls -la", (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`)
+      return
+    }
+
+    if (stderr) {
+      console.log(`stderr: ${stderr}`)
+      return
+    }
+
+    console.log(`stdout: ${stdout}`)
+  })
 
   const api_key = core.getInput("api_key")
   const template = core.getInput("template")
