@@ -7,9 +7,10 @@ inputs:
   template:
     description: Template file(s) to convert
     default: template.yml
-outputs:
-  diagram:
-    description: The XML file(s) containing the diagram of the provided template
+  output_file:
+    description: Output file for the XML results
+    required: true
+    default: template.drawio
 runs:
   using: node12
   main: index.js
