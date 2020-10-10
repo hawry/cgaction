@@ -7,6 +7,10 @@ try {
 
   console.log("using " + template + " as input")
   console.log("using " + api_key + " as key")
+
+  core.setOutput("diagram", "thisissupposedtobeadiagram")
+  const payload = JSON.stringify(github.context.payload, undefined, 2)
+  console.log(payload)  
 } catch (error) {
   core.setFailed(error.message)
 }
