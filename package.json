@@ -1,0 +1,13 @@
+{
+  "name": "cgaction",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hawry/cgaction",
+  "author": "hawry <tomas@hawry.net>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+name: CloudGaze preview
+description: Call CloudGaze during build
+inputs:
+  api_key:
+    description: API key to use in call to CloudGaze
+    required: true
+  template:
+    description: Template file(s) to convert
+    default: template.yml
+outputs:
+  diagram:
+    description: The XML file(s) containing the diagram of the provided template
+runs:
+  using: node12
+  main: index.js
