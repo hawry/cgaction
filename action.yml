@@ -1,9 +1,6 @@
 name: CloudGaze preview
 description: Call CloudGaze during build
 inputs:
-  api_key:
-    description: API key to use in call to CloudGaze
-    required: true
   template:
     description: Template file(s) to convert
     default: template.yml
